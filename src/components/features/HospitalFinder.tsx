@@ -21,7 +21,7 @@ import {
   Shield,
   Wifi,
   Coffee,
-  Parking
+  ParkingCircle
 } from "lucide-react";
 
 const HospitalFinder = () => {
@@ -189,7 +189,7 @@ const HospitalFinder = () => {
               <div className="flex flex-wrap gap-4">
                 {hospital.amenities.map((amenity: string, index: number) => {
                   const icons: any = {
-                    "Parkir": Parking,
+                    "Parkir": ParkingCircle,
                     "WiFi": Wifi,
                     "Kantin": Coffee,
                     "ATM": Car,

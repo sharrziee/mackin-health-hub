@@ -327,7 +327,7 @@ const HealthTracker = () => {
                   <SelectItem value="former">Mantan perokok</SelectItem>
                   <SelectItem value="light">Perokok ringan (1-10 batang/hari)</SelectItem>
                   <SelectItem value="moderate">Perokok sedang (11-20 batang/hari)</SelectItem>
-                  <SelectItem value="heavy">Perokok berat (>20 batang/hari)</SelectItem>
+                  <SelectItem value="heavy">Perokok berat (&gt;20 batang/hari)</SelectItem>
                 </SelectContent>
               </Select>
             </div>
