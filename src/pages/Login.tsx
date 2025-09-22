@@ -40,7 +40,7 @@ const Login = () => {
           navigate("/doctor-dashboard");
           break;
         default:
-          navigate("/user-dashboard");
+          navigate("/patient-dashboard");
       }
       setIsLoading(false);
     }, 2000);
