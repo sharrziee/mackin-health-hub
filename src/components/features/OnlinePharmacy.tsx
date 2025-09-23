@@ -21,6 +21,9 @@ import {
   AlertCircle,
   Clock
 } from "lucide-react";
+import medicineParacetamol from "@/assets/medicine-paracetamol.jpg";
+import medicineVitaminC from "@/assets/medicine-vitamin-c.jpg";
+import medicalTensimeter from "@/assets/medical-tensimeter.jpg";
 
 const OnlinePharmacy = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -48,7 +51,7 @@ const OnlinePharmacy = () => {
       rating: 4.8,
       reviews: 2340,
       stock: 150,
-      image: "/api/placeholder/200/200",
+      image: medicineParacetamol,
       description: "Obat pereda nyeri dan demam yang efektif",
       composition: "Paracetamol 500mg",
       indication: "Mengurangi demam dan meredakan nyeri ringan hingga sedang",
@@ -69,7 +72,7 @@ const OnlinePharmacy = () => {
       rating: 4.9,
       reviews: 1890,
       stock: 75,
-      image: "/api/placeholder/200/200",
+      image: medicineVitaminC,
       description: "Suplemen vitamin C untuk meningkatkan daya tahan tubuh",
       composition: "Ascorbic Acid 1000mg",
       indication: "Meningkatkan sistem imun dan antioksidan",
@@ -90,7 +93,7 @@ const OnlinePharmacy = () => {
       rating: 4.7,
       reviews: 856,
       stock: 25,
-      image: "/api/placeholder/200/200",
+      image: medicalTensimeter,
       description: "Tensimeter digital akurat untuk monitoring tekanan darah",
       composition: "Alat kesehatan digital",
       indication: "Mengukur tekanan darah sistol dan diastol",
@@ -111,7 +114,7 @@ const OnlinePharmacy = () => {
       rating: 4.6,
       reviews: 1200,
       stock: 200,
-      image: "/api/placeholder/200/200",
+      image: medicineParacetamol,
       description: "Antibiotik untuk mengatasi infeksi bakteri",
       composition: "Amoxicillin Trihydrate 500mg",
       indication: "Mengatasi infeksi saluran pernapasan, kulit, dan saluran kemih",

@@ -23,6 +23,9 @@ import {
   Coffee,
   ParkingCircle
 } from "lucide-react";
+import hospitalBrawijaya from "@/assets/hospital-brawijaya.jpg";
+import hospitalRssa from "@/assets/hospital-rssa.jpg";
+import hospitalWaluya from "@/assets/hospital-waluya.jpg";
 
 const HospitalFinder = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -34,14 +37,14 @@ const HospitalFinder = () => {
       id: 1,
       name: "RS Brawijaya",
       type: "Rumah Sakit Umum",
-      address: "Jl. Veteran No.1, Klojen, Malang",
-      phone: "(0341) 569117",
+      address: "Jl. Veteran No.1, Lowokwaru, Malang",
+      phone: "+62 856-3470-666",
       distance: "1.2 km",
       rating: 4.5,
       reviews: 1250,
       emergency: true,
       operational: "24 Jam",
-      image: "/api/placeholder/400/200",
+      image: hospitalBrawijaya,
       specialties: ["Kardiologi", "Neurologi", "Ortopedi", "Anak"],
       facilities: ["IGD 24 Jam", "ICU", "NICU", "Farmasi", "Laboratorium", "Radiologi"],
       amenities: ["Parkir", "WiFi", "Kantin", "ATM"],
@@ -54,14 +57,14 @@ const HospitalFinder = () => {
       id: 2,
       name: "RSSA Malang",
       type: "Rumah Sakit Swasta",
-      address: "Jl. Mayjen Haryono No.169, Malang",
-      phone: "(0341) 362459",
+      address: "Jl. Mayjen Haryono No.169, Lowokwaru, Malang",
+      phone: "+62 856-3470-666",
       distance: "2.8 km",
       rating: 4.7,
       reviews: 890,
       emergency: true,
       operational: "24 Jam",
-      image: "/api/placeholder/400/200",
+      image: hospitalRssa,
       specialties: ["Jantung", "Saraf", "Mata", "THT"],
       facilities: ["IGD 24 Jam", "ICU", "CCU", "Farmasi", "Laboratorium"],
       amenities: ["Parkir", "WiFi", "Kantin", "Mushola"],
@@ -74,14 +77,14 @@ const HospitalFinder = () => {
       id: 3,
       name: "RS Panti Waluya",
       type: "Rumah Sakit Swasta",
-      address: "Jl. Nusakambangan No.56, Malang",
-      phone: "(0341) 343311",
+      address: "Jl. Nusakambangan No.56, Lowokwaru, Malang",
+      phone: "+62 856-3470-666",
       distance: "3.5 km",
       rating: 4.3,
       reviews: 650,
       emergency: true,
       operational: "24 Jam",
-      image: "/api/placeholder/400/200",
+      image: hospitalWaluya,
       specialties: ["Kandungan", "Anak", "Bedah", "Penyakit Dalam"],
       facilities: ["IGD", "ICU", "NICU", "Farmasi", "Laboratorium", "CT Scan"],
       amenities: ["Parkir", "WiFi", "Kantin"],
