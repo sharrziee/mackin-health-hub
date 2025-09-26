@@ -6,6 +6,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Stethoscope,
   MessageSquare,
@@ -427,11 +429,11 @@ const DoctorDashboard = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <Label>Video Call</Label>
-                    <Badge className="bg-healthcare-primary/10 text-healthcare-primary">Rp 150.000</Badge>
+                    <Badge className="bg-healthcare-secondary/10 text-healthcare-secondary">Rp 150.000</Badge>
                   </div>
                   <div className="flex items-center justify-between">
-                    <Label>Kunjungan Rumah</Label>
-                    <Badge className="bg-healthcare-primary/10 text-healthcare-primary">Rp 300.000</Badge>
+                    <Label>Voice Call</Label>
+                    <Badge className="bg-healthcare-accent/10 text-healthcare-accent">Rp 120.000</Badge>
                   </div>
                   <Button variant="outline" className="w-full">
                     <DollarSign className="h-4 w-4 mr-2" />
@@ -440,6 +442,49 @@ const DoctorDashboard = () => {
                 </div>
               </Card>
             </div>
+
+            {/* Profile Settings */}
+            <Card className="p-6">
+              <h4 className="font-semibold mb-4">Profil Dokter</h4>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div>
+                    <Label htmlFor="doctorName">Nama Lengkap</Label>
+                    <Input defaultValue="Dr. Maya Sari, Sp.PD" className="mt-1" />
+                  </div>
+                  <div>
+                    <Label htmlFor="specialization">Spesialisasi</Label>
+                    <Input defaultValue="Spesialis Penyakit Dalam" className="mt-1" />
+                  </div>
+                  <div>
+                    <Label htmlFor="hospital">Rumah Sakit</Label>
+                    <Input defaultValue="RS Brawijaya Malang" className="mt-1" />
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <Label htmlFor="experience">Pengalaman</Label>
+                    <Input defaultValue="8 tahun" className="mt-1" />
+                  </div>
+                  <div>
+                    <Label htmlFor="education">Pendidikan</Label>
+                    <Input defaultValue="S2 Kedokteran - Universitas Brawijaya" className="mt-1" />
+                  </div>
+                  <div>
+                    <Label htmlFor="bio">Bio Singkat</Label>
+                    <Textarea defaultValue="Dokter spesialis penyakit dalam dengan pengalaman 8 tahun..." className="mt-1" />
+                  </div>
+                </div>
+              </div>
+              <div className="flex space-x-4 mt-6">
+                <Button variant="healthcare">
+                  Simpan Perubahan
+                </Button>
+                <Button variant="outline">
+                  Reset
+                </Button>
+              </div>
+            </Card>
           </TabsContent>
         </Tabs>
       </div>

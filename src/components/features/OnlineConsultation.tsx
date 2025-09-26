@@ -297,8 +297,7 @@ const OnlineConsultation = () => {
         <ChatInterface 
           doctorName={selectedDoctor.name}
           doctorSpecialty={selectedDoctor.specialty}
-          doctorAvatar={selectedDoctor.image}
-          isOnline={selectedDoctor.available}
+          isActive={selectedDoctor.available}
         />
       </div>
     );

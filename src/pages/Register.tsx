@@ -116,8 +116,13 @@ const Register = () => {
     setTimeout(() => {
       toast({
         title: "Registrasi Berhasil!",
-        description: `Akun ${formData.role} telah dibuat. Silakan login untuk melanjutkan.`,
+        description: `Akun ${formData.role === 'user' ? 'pasien' : formData.role} telah dibuat. Silakan login untuk melanjutkan.`,
       });
+      
+      // Store user role for redirect after login
+      localStorage.setItem('userRole', formData.role);
+      localStorage.setItem('userName', formData.fullName);
+      
       navigate("/login");
       setIsLoading(false);
     }, 2000);

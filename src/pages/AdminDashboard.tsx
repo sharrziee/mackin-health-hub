@@ -418,35 +418,85 @@ const AdminDashboard = () => {
                 Tambah Artikel
               </Button>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
+            
+            {/* Health Articles */}
+            <div className="space-y-4">
               <Card className="p-6">
-                <h4 className="font-semibold mb-4">Artikel Kesehatan</h4>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                    <span className="text-sm">Tips Hidup Sehat</span>
-                    <Badge variant="secondary">Published</Badge>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                    <span className="text-sm">Panduan Vaksinasi</span>
-                    <Badge className="bg-healthcare-warning/10 text-healthcare-warning">Draft</Badge>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                    <span className="text-sm">Kesehatan Mental</span>
-                    <Badge variant="secondary">Published</Badge>
-                  </div>
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="font-semibold">Artikel Kesehatan Terpublikasi</h4>
+                  <Badge className="bg-healthcare-success/10 text-healthcare-success">4 Artikel</Badge>
                 </div>
-              </Card>
-              
-              <Card className="p-6">
-                <h4 className="font-semibold mb-4">Notifikasi Sistem</h4>
-                <div className="space-y-3">
-                  <div className="p-3 bg-muted/30 rounded-lg">
-                    <p className="text-sm font-medium">Maintenance Terjadwal</p>
-                    <p className="text-xs text-muted-foreground">17 Des 2024, 02:00 - 04:00</p>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-muted/30 rounded-lg">
+                    <div className="flex-1">
+                      <h5 className="font-medium">Update Terkini Dunia Kesehatan</h5>
+                      <p className="text-sm text-muted-foreground">AI dalam diagnosis medis, terobosan terbaru...</p>
+                      <div className="flex items-center text-xs text-muted-foreground mt-1">
+                        <span>15 Desember 2024</span>
+                        <span className="mx-2">•</span>
+                        <span>1,240 views</span>
+                      </div>
+                    </div>
+                    <div className="flex space-x-2">
+                      <Badge variant="secondary">Published</Badge>
+                      <Button variant="outline" size="sm">
+                        <Edit className="h-4 w-4" />
+                      </Button>
+                    </div>
                   </div>
-                  <div className="p-3 bg-muted/30 rounded-lg">
-                    <p className="text-sm font-medium">Update Fitur Baru</p>
-                    <p className="text-xs text-muted-foreground">Konsultasi Video Group</p>
+
+                  <div className="flex items-center justify-between p-4 bg-muted/30 rounded-lg">
+                    <div className="flex-1">
+                      <h5 className="font-medium">Tips Menjaga Kesehatan di Musim Hujan</h5>
+                      <p className="text-sm text-muted-foreground">Panduan lengkap mencegah penyakit musim hujan...</p>
+                      <div className="flex items-center text-xs text-muted-foreground mt-1">
+                        <span>14 Desember 2024</span>
+                        <span className="mx-2">•</span>
+                        <span>890 views</span>
+                      </div>
+                    </div>
+                    <div className="flex space-x-2">
+                      <Badge variant="secondary">Published</Badge>
+                      <Button variant="outline" size="sm">
+                        <Edit className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between p-4 bg-muted/30 rounded-lg">
+                    <div className="flex-1">
+                      <h5 className="font-medium">Pentingnya Vaksinasi untuk Anak</h5>
+                      <p className="text-sm text-muted-foreground">Jadwal imunisasi dan manfaat vaksinasi...</p>
+                      <div className="flex items-center text-xs text-muted-foreground mt-1">
+                        <span>13 Desember 2024</span>
+                        <span className="mx-2">•</span>
+                        <span>1,150 views</span>
+                      </div>
+                    </div>
+                    <div className="flex space-x-2">
+                      <Badge variant="secondary">Published</Badge>
+                      <Button variant="outline" size="sm">
+                        <Edit className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between p-4 bg-muted/30 rounded-lg">
+                    <div className="flex-1">
+                      <h5 className="font-medium">Cara Mengatasi Stress di Tempat Kerja</h5>
+                      <p className="text-sm text-muted-foreground">Strategi mengelola tekanan dan stres kerja...</p>
+                      <div className="flex items-center text-xs text-muted-foreground mt-1">
+                        <span>12 Desember 2024</span>
+                        <span className="mx-2">•</span>
+                        <span>756 views</span>
+                      </div>
+                    </div>
+                    <div className="flex space-x-2">
+                      <Badge variant="secondary">Published</Badge>
+                      <Button variant="outline" size="sm">
+                        <Edit className="h-4 w-4" />
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -456,6 +506,14 @@ const AdminDashboard = () => {
           {/* System Settings */}
           <TabsContent value="settings" className="space-y-4">
             <h3 className="text-xl font-semibold">Pengaturan Sistem</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="p-6">
+                <h4 className="font-semibold mb-4">Konfigurasi Aplikasi</h4>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <Label>Maintenance Mode</Label>
+                    <Badge variant="outline">Off</Badge>
+                  </div>
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="p-6">
                 <h4 className="font-semibold mb-4">Konfigurasi Platform</h4>

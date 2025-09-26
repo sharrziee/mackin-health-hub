@@ -31,6 +31,10 @@ const Login = () => {
         description: `Selamat datang kembali sebagai ${role}`,
       });
       
+      // Store user session
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('userRole', role);
+      
       // Navigate to respective dashboard
       switch (role) {
         case "admin":
