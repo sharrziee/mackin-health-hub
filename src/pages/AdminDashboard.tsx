@@ -514,14 +514,6 @@ const AdminDashboard = () => {
                     <Label>Maintenance Mode</Label>
                     <Badge variant="outline">Off</Badge>
                   </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card className="p-6">
-                <h4 className="font-semibold mb-4">Konfigurasi Platform</h4>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <Label>Maintenance Mode</Label>
-                    <Badge variant="outline">Inactive</Badge>
-                  </div>
                   <div className="flex items-center justify-between">
                     <Label>Registration</Label>
                     <Badge className="bg-healthcare-success/10 text-healthcare-success">Open</Badge>
