@@ -31,7 +31,7 @@ import {
 const BookingAppointment = () => {
   const [selectedDate, setSelectedDate] = useState<Date>();
   const [selectedDoctor, setSelectedDoctor] = useState("");
-  const [selectedSpecialty, setSelectedSpecialty] = useState("");
+  const [selectedSpecialty, setSelectedSpecialty] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 
   const doctors = [
@@ -98,7 +98,7 @@ const BookingAppointment = () => {
   ];
 
   const filteredDoctors = doctors.filter(doctor => 
-    (selectedSpecialty === "" || doctor.specialty === selectedSpecialty) &&
+    (selectedSpecialty === "all" || doctor.specialty === selectedSpecialty) &&
     (searchQuery === "" || doctor.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
      doctor.specialty.toLowerCase().includes(searchQuery.toLowerCase()))
   );
@@ -455,7 +455,7 @@ const BookingAppointment = () => {
             <SelectValue placeholder="Filter Spesialis" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">Semua Spesialis</SelectItem>
+            <SelectItem value="all">Semua Spesialis</SelectItem>
             {specialties.map((specialty) => (
               <SelectItem key={specialty} value={specialty}>
                 {specialty}

@@ -29,8 +29,8 @@ import hospitalWaluya from "@/assets/hospital-waluya.jpg";
 
 const HospitalFinder = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCity, setSelectedCity] = useState("");
-  const [selectedType, setSelectedType] = useState("");
+  const [selectedCity, setSelectedCity] = useState("all");
+  const [selectedType, setSelectedType] = useState("all");
 
   const hospitals = [
     {
@@ -101,8 +101,8 @@ const HospitalFinder = () => {
   const filteredHospitals = hospitals.filter(hospital => 
     (searchQuery === "" || hospital.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
      hospital.address.toLowerCase().includes(searchQuery.toLowerCase())) &&
-    (selectedCity === "" || hospital.address.toLowerCase().includes(selectedCity.toLowerCase())) &&
-    (selectedType === "" || hospital.type === selectedType)
+    (selectedCity === "all" || hospital.address.toLowerCase().includes(selectedCity.toLowerCase())) &&
+    (selectedType === "all" || hospital.type === selectedType)
   );
 
   const HospitalDetail = ({ hospital }: { hospital: any }) => {
@@ -265,7 +265,7 @@ const HospitalFinder = () => {
             <SelectValue placeholder="Pilih Kota" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">Semua Kota</SelectItem>
+            <SelectItem value="all">Semua Kota</SelectItem>
             {cities.map((city) => (
               <SelectItem key={city} value={city.toLowerCase()}>
                 {city}
@@ -278,7 +278,7 @@ const HospitalFinder = () => {
             <SelectValue placeholder="Jenis Rumah Sakit" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">Semua Jenis</SelectItem>
+            <SelectItem value="all">Semua Jenis</SelectItem>
             {hospitalTypes.map((type) => (
               <SelectItem key={type} value={type}>
                 {type}

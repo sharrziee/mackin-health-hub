@@ -27,7 +27,7 @@ import medicalTensimeter from "@/assets/medical-tensimeter.jpg";
 
 const OnlinePharmacy = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [cart, setCart] = useState<any[]>([]);
 
   const categories = [
@@ -157,7 +157,7 @@ const OnlinePharmacy = () => {
   const filteredProducts = products.filter(product => 
     (searchQuery === "" || product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
      product.brand.toLowerCase().includes(searchQuery.toLowerCase())) &&
-    (selectedCategory === "" || product.category === selectedCategory)
+    (selectedCategory === "all" || product.category === selectedCategory)
   );
 
   const ProductDetail = ({ product }: { product: any }) => {
@@ -441,7 +441,7 @@ const OnlinePharmacy = () => {
             <SelectValue placeholder="Kategori" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">Semua Kategori</SelectItem>
+            <SelectItem value="all">Semua Kategori</SelectItem>
             {categories.map((category) => (
               <SelectItem key={category.id} value={category.id}>
                 {category.name}

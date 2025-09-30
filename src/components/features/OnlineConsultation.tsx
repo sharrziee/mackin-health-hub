@@ -36,7 +36,7 @@ import {
 } from 'lucide-react';
 
 const OnlineConsultation = () => {
-  const [selectedSpecialty, setSelectedSpecialty] = useState<string>('');
+  const [selectedSpecialty, setSelectedSpecialty] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedDoctor, setSelectedDoctor] = useState<any>(null);
   const [showProfile, setShowProfile] = useState(false);
@@ -136,7 +136,7 @@ const OnlineConsultation = () => {
   ];
 
   const filteredDoctors = doctors.filter(doctor => 
-    (selectedSpecialty === '' || doctor.specialty.toLowerCase().includes(selectedSpecialty.toLowerCase())) &&
+    (selectedSpecialty === 'all' || doctor.specialty.toLowerCase().includes(selectedSpecialty.toLowerCase())) &&
     (searchQuery === '' || 
      doctor.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
      doctor.specialty.toLowerCase().includes(searchQuery.toLowerCase()))
@@ -329,7 +329,7 @@ const OnlineConsultation = () => {
               <SelectValue placeholder="Pilih Spesialis" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">Semua Spesialis</SelectItem>
+              <SelectItem value="all">Semua Spesialis</SelectItem>
               {specialties.map((specialty) => (
                 <SelectItem key={specialty.id} value={specialty.id}>
                   {specialty.name}

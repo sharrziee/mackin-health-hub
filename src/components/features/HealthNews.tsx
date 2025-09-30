@@ -28,7 +28,7 @@ import {
 
 const HealthNews = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const categories = [
     { id: "update", name: "Update Terkini", icon: TrendingUp },
@@ -184,7 +184,7 @@ const HealthNews = () => {
 
   const filteredArticles = featuredArticles.filter(article => 
     (searchQuery === "" || article.title.toLowerCase().includes(searchQuery.toLowerCase())) &&
-    (selectedCategory === "" || article.category === selectedCategory)
+    (selectedCategory === "all" || article.category === selectedCategory)
   );
 
   const ArticleDetail = ({ article }: { article: any }) => {
@@ -236,7 +236,7 @@ const HealthNews = () => {
             <SelectValue placeholder="Pilih Kategori" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">Semua Kategori</SelectItem>
+            <SelectItem value="all">Semua Kategori</SelectItem>
             {categories.map((category) => (
               <SelectItem key={category.id} value={category.id}>{category.name}</SelectItem>
             ))}
